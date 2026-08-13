@@ -85,8 +85,9 @@ header.scrolled{background:rgba(246,244,239,.94);box-shadow:0 1px 0 var(--line);
 }
 .hero h1{
   font-family:"Noto Sans KR",sans-serif;
-  font-size:clamp(38px,6.4vw,74px);line-height:1.2;font-weight:900;
+  font-size:clamp(34px,6.4vw,74px);line-height:1.2;font-weight:900;
   letter-spacing:-.03em;margin-bottom:30px;color:var(--ink);
+  word-break:keep-all;
 }
 .hero h1 .accent{color:var(--brass);font-weight:900}
 .hero p.lead{
@@ -273,6 +274,8 @@ footer{background:var(--deep);color:rgba(255,255,255,.7);padding:56px 0 40px;fon
   .nav-links li a{display:block;padding:17px 28px;font-size:15px}
   .nav-links-cta{display:block}
   .nav-links-cta a{color:var(--brass);font-weight:700}
+  .hero h1{font-size:32px;line-height:1.45}
+  .sec-head h2,.contact h2,.prof-name{word-break:keep-all}
   .about-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
   .prof-grid{grid-template-columns:1fr;gap:36px}
   .prof-photo{max-width:340px;margin:0 auto}
