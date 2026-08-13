@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)file:///C:/Users/ok/Downloads/index_5.html -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>세무법인 선율</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="./세무법인 선율_files/css2" rel="stylesheet">
+<style>
+:root{
+  --ink:#151a24;
+  --ink-soft:#333c4b;
+  --paper:#f6f4ef;
+  --paper-2:#ffffff;
+  --line:#dcd8ce;
+  --brass:#8a6d3b;
+  --brass-lite:#b9986a;
+  --deep:#1c2836;
+  --gold:#8a6d3b;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Noto Sans KR",sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+.serif{font-family:"Nanum Myeongjo",serif}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.eyebrow{
+  font-size:12px;letter-spacing:.32em;text-transform:uppercase;
+  color:var(--brass);font-weight:500;margin-bottom:20px;
+}
+
+/* header */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(246,244,239,.0);
+  transition:background .4s,box-shadow .4s;
+}
+header.scrolled{background:rgba(246,244,239,.94);box-shadow:0 1px 0 var(--line);backdrop-filter:blur(8px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font-size:20px;font-weight:800;letter-spacing:.04em;color:var(--ink);display:inline-flex;align-items:center;gap:11px}
+.logo .logo-mark{height:36px;width:82px;display:block;flex:none}
+.logo-txt{display:inline-block}
+.logo .logo-txt span{color:var(--brass)}
+.nav-links{display:flex;gap:34px;list-style:none}
+.nav-links a{
+  text-decoration:none;color:var(--ink-soft);font-size:14px;font-weight:500;
+  letter-spacing:.02em;transition:color .2s;position:relative;
+}
+.nav-links a:hover{color:var(--ink)}
+.nav-cta{
+  background:var(--deep);color:#fff;padding:11px 22px;border-radius:2px;
+  font-size:13px;font-weight:500;text-decoration:none;transition:background .25s;
+}
+.nav-cta:hover{background:var(--brass)}
+.menu-btn{display:none;background:none;border:none;font-size:26px;color:var(--ink);cursor:pointer}
+
+/* hero */
+.hero{
+  min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;
+  background:
+    linear-gradient(180deg,rgba(28,40,54,.02),rgba(28,40,54,.06)),
+    var(--paper);
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    linear-gradient(var(--line) 1px,transparent 1px),
+    linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:64px 64px;opacity:.28;
+  mask-image:radial-gradient(circle at 72% 42%,#000,transparent 68%);
+  -webkit-mask-image:radial-gradient(circle at 72% 42%,#000,transparent 68%);
+}
+.hero-inner{position:relative;z-index:2;padding-top:90px}
+.hero-tag{
+  display:inline-block;font-size:12px;letter-spacing:.3em;color:var(--brass);
+  font-weight:500;margin-bottom:28px;
+  border-left:2px solid var(--gold);padding-left:14px;
+}
+.hero h1{
+  font-family:"Noto Sans KR",sans-serif;
+  font-size:clamp(38px,6.4vw,74px);line-height:1.2;font-weight:900;
+  letter-spacing:-.03em;margin-bottom:30px;color:var(--ink);
+}
+.hero h1 .accent{color:var(--brass);font-weight:900}
+.hero p.lead{
+  font-size:clamp(16px,1.9vw,20px);color:var(--ink-soft);max-width:560px;
+  font-weight:400;margin-bottom:44px;
+}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.btn-primary{
+  background:var(--deep);color:#fff;padding:16px 34px;border-radius:2px;
+  text-decoration:none;font-weight:500;font-size:15px;letter-spacing:.02em;
+  transition:transform .2s,background .25s;
+}
+.btn-primary:hover{background:var(--brass);transform:translateY(-2px)}
+.btn-ghost{
+  color:var(--ink);padding:16px 8px;text-decoration:none;font-weight:500;
+  font-size:15px;border-bottom:1px solid var(--ink);transition:color .2s,border-color .2s;
+}
+.btn-ghost:hover{color:var(--brass);border-color:var(--brass)}
+.scroll-hint{
+  position:absolute;bottom:38px;left:50%;transform:translateX(-50%);
+  font-size:11px;letter-spacing:.3em;color:var(--ink-soft);z-index:2;
+  display:flex;flex-direction:column;align-items:center;gap:10px;
+}
+.scroll-hint::after{content:"";width:1px;height:44px;background:var(--brass);animation:drop 2s infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* section base */
+section{padding:120px 0}
+.sec-head{margin-bottom:64px;max-width:680px}
+.sec-head h2{
+  font-size:clamp(26px,3.4vw,40px);font-weight:800;line-height:1.35;
+  letter-spacing:-.01em;color:var(--ink);
+}
+.sec-head h2 .em{color:var(--brass)}
+
+/* about */
+.about{background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:start}
+.about-lead{font-size:19px;line-height:1.75;color:var(--ink);font-weight:700;letter-spacing:-.022em;word-break:keep-all;margin-bottom:26px}
+.about-body{color:var(--ink-soft);font-size:15.5px;font-weight:400}
+.about-body p{margin-bottom:18px}
+.stats{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line)}
+.stat{padding:26px 0;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:20px}
+.stat .num{font-size:44px;font-weight:800;color:#a5762f;line-height:1;min-width:120px}
+.stat .num small{font-size:22px;color:#a5762f;opacity:.75}
+.stat .lbl{font-size:16px;color:var(--ink);font-weight:500}
+
+/* why */
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
+.why-card{
+  padding:44px 34px 48px;border-right:1px solid var(--line);position:relative;
+  transition:background .3s;
+}
+.why-card:last-child{border-right:none}
+.why-card:hover{background:var(--paper-2)}
+.why-num{font-size:13px;letter-spacing:.2em;color:var(--brass);font-weight:700;margin-bottom:28px}
+.why-card h3{font-size:20px;font-weight:700;margin-bottom:16px;line-height:1.45}
+.why-card p{font-size:14.5px;color:var(--ink-soft);font-weight:400}
+
+/* practice */
+.practice{background:var(--deep);color:#fff}
+.practice .sec-head h2{color:#fff}
+.practice .eyebrow{color:var(--gold)}
+.pr-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1)}
+.pr-item{
+  background:var(--deep);padding:34px 32px;display:flex;gap:22px;align-items:flex-start;
+  transition:background .3s;
+}
+.pr-item:hover{background:#25344a}
+.pr-idx{font-family:"Nanum Myeongjo",serif;font-size:22px;color:var(--gold);font-weight:700;min-width:34px}
+.pr-item h4{font-size:17px;font-weight:700;margin-bottom:8px}
+.pr-item p{font-size:13.5px;color:rgba(255,255,255,.72);font-weight:400}
+
+/* team */
+.team-note{background:var(--paper-2);border:1px solid var(--line);padding:48px 44px;margin-top:8px}
+.team-note h3{font-size:22px;font-weight:700;margin-bottom:14px}
+.team-note p{color:var(--ink-soft);font-size:15px;font-weight:400;max-width:640px}
+.team-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.chip{
+  border:1px solid var(--line);padding:9px 18px;border-radius:2px;font-size:14px;
+  color:var(--ink-soft);background:var(--paper);
+}
+
+/* principles */
+.prin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
+.prin{border-top:2px solid var(--gold);padding-top:24px}
+.prin h4{font-size:18px;font-weight:700;margin-bottom:12px}
+.prin p{font-size:14.5px;color:var(--ink-soft);font-weight:400}
+
+/* contact */
+.contact{background:var(--paper-2);border-top:1px solid var(--line)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.contact h2{font-size:clamp(28px,3.8vw,44px);font-weight:800;line-height:1.3;margin-bottom:24px}
+.contact h2 .em{color:var(--brass)}
+.contact-info{list-style:none}
+.contact-info li{padding:16px 0;border-bottom:1px solid var(--line);display:flex;gap:18px;font-size:15px}
+.contact-info .k{color:var(--brass);font-weight:700;min-width:78px;font-size:13px;letter-spacing:.05em;padding-top:2px}
+.contact-info .v{color:var(--ink)}
+.contact-cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+.map-box{
+  margin-top:70px;border:1px solid var(--line);overflow:hidden;
+  filter:grayscale(.15);
+}
+
+/* footer */
+footer{background:var(--deep);color:rgba(255,255,255,.7);padding:56px 0 40px;font-size:13px;font-weight:400}
+.foot-top{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap;margin-bottom:34px}
+.foot-logo{font-size:22px;font-weight:800;color:#fff;letter-spacing:.04em;display:inline-flex;align-items:center;gap:12px}
+.foot-logo .logo-mark{height:28px;width:64px;display:block;flex:none}
+.foot-logo .em,.foot-logo span span{color:var(--brass-lite)}
+.foot-addr{line-height:1.9}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+/* profile */
+/* [사진 준비 시 아래 2줄 삭제] */
+.prof-photo{display:none!important}
+.prof-grid{grid-template-columns:1fr!important}
+
+.prof-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:64px;align-items:center}
+.prof-photo{
+  position:relative;aspect-ratio:4/5;background:var(--paper-2);
+  border:1px solid var(--line);overflow:hidden;
+}
+.prof-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.prof-photo .ph{
+  position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:14px;color:var(--ink-soft);
+  background:
+    repeating-linear-gradient(45deg,transparent,transparent 14px,rgba(28,40,54,.02) 14px,rgba(28,40,54,.02) 28px),
+    var(--paper-2);
+}
+.prof-photo .ph .ic{font-family:"Nanum Myeongjo",serif;font-size:52px;color:var(--brass-lite);opacity:.5}
+.prof-photo .ph small{font-size:12px;letter-spacing:.15em}
+.prof-photo::after{content:"";position:absolute;left:0;bottom:0;width:64px;height:4px;background:var(--gold)}
+.prof-role{font-size:13px;letter-spacing:.18em;color:var(--brass);font-weight:700;margin-bottom:14px}
+.prof-name{font-size:clamp(26px,3.2vw,36px);font-weight:800;margin-bottom:6px;letter-spacing:-.01em}
+.prof-name span{font-family:"Noto Sans KR",sans-serif;font-size:16px;font-weight:500;color:var(--ink-soft);letter-spacing:0;margin-left:10px}
+.prof-line{width:44px;height:2px;background:var(--gold);margin:22px 0 26px}
+.prof-bio p{color:var(--ink-soft);font-size:15.5px;font-weight:400;margin-bottom:16px}
+.prof-bio p strong{color:var(--ink);font-weight:500}
+.prof-tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.prof-tags .chip{border:1px solid var(--line);padding:8px 16px;border-radius:2px;font-size:13.5px;color:var(--ink-soft);background:var(--paper)}
+
+/* floating consult buttons */
+.float-cta{
+  position:fixed;right:22px;bottom:22px;z-index:90;
+  display:flex;flex-direction:column;gap:10px;
+}
+.float-btn{
+  display:flex;align-items:center;gap:9px;
+  padding:13px 20px;border-radius:999px;text-decoration:none;
+  font-size:14px;font-weight:700;letter-spacing:.01em;
+  box-shadow:0 4px 18px rgba(21,26,36,.18);
+  transition:transform .2s,box-shadow .2s;
+}
+.float-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(21,26,36,.24)}
+.float-btn.kakao{background:#FEE500;color:#191919}
+.float-btn.call{background:var(--deep);color:#fff}
+.float-btn svg{width:18px;height:18px;flex:none}
+@media(max-width:860px){
+  .float-cta{right:14px;bottom:14px}
+  .float-btn{padding:12px 16px;font-size:13px}
+}
+
+.member-card{margin-top:72px;padding-top:56px;border-top:1px solid var(--line);max-width:720px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .nav-links,.nav-cta{display:none}
+  .menu-btn{display:block}
+  .about-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
+  .prof-grid{grid-template-columns:1fr;gap:36px}
+  .prof-photo{max-width:340px;margin:0 auto}
+  .why-grid{grid-template-columns:1fr}
+  .why-card{border-right:none;border-bottom:1px solid var(--line)}
+  .pr-grid{grid-template-columns:1fr}
+  .prin-grid{grid-template-columns:1fr;gap:28px}
+  section{padding:84px 0}
+  .stat .num{font-size:36px;min-width:96px}
+}
+@media(prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  .scroll-hint::after{animation:none}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <div class="logo">
+      <svg class="logo-mark" viewBox="0 0 218 96" width="82" height="36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <ellipse cx="166.75" cy="60" rx="39" ry="29" fill="#ccc2b8"></ellipse>
+        <rect x="161" y="29" width="11.5" height="49" fill="#a5762f"></rect>
+        <path d="M15,69 H64 A11.5,11.5 0 0 0 64,46 H24 A10,10 0 0 1 24,26 H70 L93,50 Q99,56.5 105,50 L130,26 H203" fill="none" stroke="#2b201a" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      <span class="logo-txt">세무법인 <span>선율</span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="file:///C:/Users/ok/Downloads/index_5.html#about">법인 소개</a></li>
+      <li><a href="file:///C:/Users/ok/Downloads/index_5.html#why">선율의 차이</a></li>
+      <li><a href="file:///C:/Users/ok/Downloads/index_5.html#practice">업무 분야</a></li>
+      <li><a href="file:///C:/Users/ok/Downloads/index_5.html#profile">구성원 소개</a></li>
+      <li><a href="file:///C:/Users/ok/Downloads/index_5.html#contact">오시는 길</a></li>
+    </ul>
+    <a href="file:///C:/Users/ok/Downloads/index_5.html#contact" class="nav-cta">상담 신청</a>
+    <button class="menu-btn" onclick="document.querySelector(&#39;.nav-links&#39;).scrollIntoView()">≡</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="padding:0">
+  <div class="wrap hero-inner">
+    <span class="hero-tag">SUNYUL TAX FIRM · 세무법인 선율</span>
+    <h1>숫자 너머의 판단까지,<br><span class="accent">함께 고민하는</span> 세무파트너</h1>
+    <p class="lead">신고 대행을 넘어, 사업의 흐름을 읽고 세무 리스크를 미리 설계합니다. 19년 실무의 깊이로 고객의 다음을 준비합니다.</p>
+    <div class="hero-actions">
+      <a href="file:///C:/Users/ok/Downloads/index_5.html#contact" class="btn-primary">상담 신청하기</a>
+      <a href="file:///C:/Users/ok/Downloads/index_5.html#about" class="btn-ghost">법인 소개 보기</a>
+    </div>
+  </div>
+  <div class="scroll-hint">SCROLL</div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <p class="eyebrow">About us</p>
+        <p class="about-lead serif">단순한 세무 대리인이 아니라, 사업의 성장 단계마다 옆에서 판단을 나누는 파트너를 지향합니다.</p>
+        <div class="about-body">
+          <p>세무법인 선율은 대형 증권사를 거친 대표세무사의 19년 실무 경험을 토대로, 개인사업자부터 법인까지 각 사업체의 구조를 깊이 이해한 맞춤형 세무 서비스를 제공합니다.</p>
+          <p>기장·신고 대행에 머무르지 않고, 세무조사 대응·법인 결산·투자 계약 검토·상속·증여 설계까지 사업의 전 생애주기를 함께합니다. 대표세무사가 지금도 사업체를 직접 운영하고 있기에, 고객의 현장을 숫자가 아닌 실제 사업의 언어로 읽어냅니다.</p>
+        </div>
+      </div>
+      <div class="stats reveal">
+        <div class="stat"><div class="num">19<small>년+</small></div><div class="lbl">대표세무사 실무 경력</div></div>
+        <div class="stat"><div class="num">300<small>+</small></div><div class="lbl">함께하는 사업체 고객</div></div>
+        <div class="stat"><div class="num">120<small>건+</small></div><div class="lbl">개인사업자 법인 전환 컨설팅</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Why Sunyul</p>
+      <h2 class="serif">세무법인 선율이 <span class="em">다른 이유</span></h2>
+    </div>
+    <div class="why-grid reveal">
+      <div class="why-card">
+        <div class="why-num">01 &nbsp;현장을 아는 세무</div>
+        <h3>사업을 직접 운영하는<br>세무사의 시선</h3>
+        <p>대표세무사가 지금도 사업체를 직접 운영하고 있습니다. 장부 뒤의 사업 구조와 자금 흐름을 매일 겪는 사람으로서, 세무를 넘어 경영 판단까지 함께 검토합니다.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">02 &nbsp;끝까지 같은 담당</div>
+        <h3>대표가 직접 챙기는<br>밀착 케어</h3>
+        <p>모든 고객 소통 채널에 대표세무사가 함께 참여합니다. 담당 실무자와 대표가 업무를 이중으로 파악하고 있어, 어떤 상황에도 공백 없이 이어집니다.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">03 &nbsp;미리 짚는 리스크</div>
+        <h3>문제가 되기 전에<br>설계하는 세무</h3>
+        <p>신고 기한에 쫓겨 대응하는 것이 아니라, 세무조사·가산세·과세 쟁점을 미리 진단하고 보수적·공격적 해석을 함께 제시해 고객이 판단할 수 있게 합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRACTICE -->
+<section class="practice" id="practice">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Practice areas</p>
+      <h2 class="serif">업무 분야</h2>
+    </div>
+    <div class="pr-grid reveal">
+      <div class="pr-item"><div class="pr-idx serif">01</div><div><h4>기장·세무 대리</h4><p>개인·법인 기장 대행, 부가가치세·종합소득세·원천세 신고 등 정기 세무 업무 전반</p></div></div>
+      <div class="pr-item"><div class="pr-idx serif">02</div><div><h4>법인 결산·조정</h4><p>법인세 세무조정, 결산 검토, 재무제표 분석을 통한 절세 및 재무 리스크 진단</p></div></div>
+      <div class="pr-item"><div class="pr-idx serif">03</div><div><h4>세무조사 대응</h4><p>조사 사전 진단부터 소명 자료 작성, 과세 전 적부심·불복 청구까지 전 과정 조력</p></div></div>
+      <div class="pr-item"><div class="pr-idx serif">04</div><div><h4>상속·증여 설계</h4><p>가업승계, 비상장주식 평가, 재산 이전 시점·방식 설계를 통한 사전 세무 플래닝</p></div></div>
+      <div class="pr-item"><div class="pr-idx serif">05</div><div><h4>투자·계약 세무 검토</h4><p>투자·지분 계약의 세무상 쟁점 검토, 거래 구조에 따른 과세 리스크 사전 분석</p></div></div>
+      <div class="pr-item"><div class="pr-idx serif">06</div><div><h4>사업체 설립·컨설팅</h4><p>개인·법인 설립 및 전환, 사업 단계별 세무 구조 설계와 운영 자문</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROFILE -->
+<section id="profile">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Our people</p>
+      <h2 class="serif">구성원 <span class="em">소개</span></h2>
+    </div>
+    <div class="prof-grid reveal">
+      <div class="prof-photo">
+        <!-- 사진 준비되면 아래 주석을 해제하고 파일명을 넣으세요.
+        <img src="profile.jpg" alt="대표세무사 프로필 사진"> -->
+        <div class="ph">
+          <div class="ic">律</div>
+          <small>PROFILE PHOTO</small>
+        </div>
+      </div>
+      <div>
+        <div class="prof-role">SUNYUL TAX FIRM</div>
+        <div class="prof-name serif">황효건 <span>대표세무사</span></div>
+        <div class="prof-line"></div>
+        <div class="prof-bio">
+          <p><strong>19년간 현장에서 세무를 실무로 다뤄 왔습니다.</strong> 대형 증권사를 거쳐, 개인사업자부터 법인까지 다양한 사업체의 세무를 직접 책임져 온 실무형 세무사입니다.</p>
+          <p>신고 대행에 머무르지 않고 세무조사 대응, 법인 결산, 상속·증여 설계, 투자 계약 검토까지 사업의 전 생애주기를 함께합니다. 지금도 사업체를 직접 운영하며 고객의 현장을 숫자가 아닌 실제 사업의 언어로 읽어냅니다.</p>
+        </div>
+        <div class="prof-tags">
+          <span class="chip">세무조사 대응</span>
+          <span class="chip">법인 결산·조정</span>
+          <span class="chip">상속·증여 설계</span>
+          <span class="chip">투자·계약 세무 검토</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="member-card reveal">
+      <div class="prof-role">SUNYUL TAX FIRM</div>
+      <div class="prof-name serif">김희진 <span>세무사</span></div>
+      <div class="prof-line"></div>
+      <div class="prof-bio">
+        <p><strong>납세자와 과세관청, 양쪽을 모두 경험한 세무사입니다.</strong> 대형 증권사와 일선 세무서 실무를 두루 거친 19년 경력으로, 개인·법인의 세무 전반을 폭넓게 다룹니다.</p>
+        <p>과세관청이 어떤 지점을 들여다보는지 아는 것은 신고의 완성도를 좌우합니다. 신고 단계에서부터 쟁점이 될 수 있는 부분을 미리 점검해, 사후 소명과 가산세 리스크를 줄이는 꼼꼼한 세무를 지향합니다.</p>
+      </div>
+      <div class="prof-tags">
+        <span class="chip">기장·세무 신고</span>
+        <span class="chip">종합소득세·부가가치세</span>
+        <span class="chip">과세관청 대응</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPLES -->
+<section id="principles" style="background:var(--paper-2);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Our principles</p>
+      <h2 class="serif">선율이 지키는 <span class="em">원칙</span></h2>
+    </div>
+    <div class="prin-grid reveal">
+      <div class="prin"><h4>정직한 판단</h4><p>유리한 해석만 전하지 않습니다. 리스크가 있으면 있는 그대로, 보수적·공격적 견해를 함께 짚어 고객이 스스로 결정할 수 있게 합니다.</p></div>
+      <div class="prin"><h4>지속되는 담당</h4><p>사건을 맡은 담당팀이 처음부터 끝까지 함께합니다. 담당자 교체로 인한 공백과 반복 설명을 만들지 않습니다.</p></div>
+      <div class="prin"><h4>투명한 소통</h4><p>진행 상황과 근거를 숨김없이 공유하고, 세법 용어가 아닌 고객이 이해할 수 있는 언어로 설명합니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="reveal">
+        <p class="eyebrow">Contact</p>
+        <h2 class="serif">세무 고민, <span class="em">편하게</span><br>문의해 주세요</h2>
+        <p style="color:var(--ink-soft);font-weight:400;font-size:15.5px">첫 상담에서 현재 세무 상황을 진단하고, 필요한 방향을 함께 정리해 드립니다.</p>
+        <div class="contact-cta">
+          <a href="tel:010-4145-1318" class="btn-primary">전화 상담 신청</a>
+          <a href="mailto:hyogeon.hwang@gmail.com" class="btn-ghost">이메일 문의</a>
+        </div>
+      </div>
+      <ul class="contact-info reveal">
+        <li><span class="k">대표번호</span><span class="v">02-2038-6632</span></li>
+        <li><span class="k">이메일</span><span class="v">hyogeon.hwang@gmail.com</span></li>
+        <li><span class="k">주소</span><span class="v">서울특별시 광진구 천호대로 583 KJ빌딩 3층</span></li>
+        <li><span class="k">상담시간</span><span class="v">평일 09:00 – 18:00</span></li>
+      </ul>
+    </div>
+    <div class="map-box reveal">
+      <iframe src="./세무법인 선율_files/maps.html" width="100%" height="380" style="border:0;display:block" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="세무법인 선율 오시는 길"></iframe>
+    </div>
+  </div>
+</section>
+
+<div class="float-cta">
+  <a class="float-btn kakao" href="https://open.kakao.com/o/stCoJKii" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3C6.48 3 2 6.54 2 10.9c0 2.8 1.86 5.26 4.66 6.65-.15.52-.96 3.32-.99 3.54 0 0-.02.17.09.23.11.06.24.01.24.01.32-.04 3.66-2.4 4.24-2.81.57.08 1.16.13 1.76.13 5.52 0 10-3.54 10-7.9S17.52 3 12 3z"></path></svg>
+    카톡 상담
+  </a>
+  <a class="float-btn call" href="tel:010-4145-1318">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C10.61 21 3 13.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.25 1.01l-2.2 2.2z"></path></svg>
+    전화 상담
+  </a>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-logo">
+          <svg class="logo-mark" viewBox="0 0 218 96" width="64" height="28" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <ellipse cx="166.75" cy="60" rx="39" ry="29" fill="rgba(204,194,184,.35)"></ellipse>
+            <rect x="161" y="29" width="11.5" height="49" fill="#b9986a"></rect>
+            <path d="M15,69 H64 A11.5,11.5 0 0 0 64,46 H24 A10,10 0 0 1 24,26 H70 L93,50 Q99,56.5 105,50 L130,26 H203" fill="none" stroke="#f2ede4" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+          <span>세무법인 <span class="em">선율</span></span>
+        </div>
+        <p style="margin-top:12px;max-width:340px;line-height:1.8">숫자 너머의 판단까지 함께 고민하는 세무파트너</p>
+      </div>
+      <div class="foot-addr">
+        서울특별시 광진구 천호대로 583 KJ빌딩 3층<br>
+        대표번호 02-2038-6632<br>
+        이메일 hyogeon.hwang@gmail.com<br>
+        상담시간 평일 09:00 – 18:00
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 SUNYUL TAX FIRM. All rights reserved.</span>
+      <span>세무법인 선율 · 대표세무사</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// header scroll state
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>{hdr.classList.toggle('scrolled',scrollY>40)});
+// reveal on scroll
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.14});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+
+</body></html>
