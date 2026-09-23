@@ -248,9 +248,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.7);padding:56px 0 40px;fon
   .float-btn{padding:12px 16px;font-size:13px}
 }
 
-.member-grid{margin-top:72px;padding-top:56px;border-top:1px solid var(--line)}
-.prof-photo-mono .mono{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:linear-gradient(160deg,var(--paper-2),#eef0f4)}
-.prof-photo-mono .mono small{font-size:11px;letter-spacing:.22em;color:var(--ink-soft)}
+.member-card{margin-top:72px;padding-top:56px;border-top:1px solid var(--line);max-width:720px}
 
 /* reveal */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
@@ -424,30 +422,18 @@ footer{background:var(--deep);color:rgba(255,255,255,.7);padding:56px 0 40px;fon
       </div>
     </div>
 
-    <div class="prof-grid member-grid reveal">
-      <div class="prof-photo prof-photo-mono">
-        <div class="mono">
-          <svg viewBox="0 0 218 96" width="120" height="53" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <ellipse cx="166.75" cy="60" rx="39" ry="29" fill="#ccc2b8"/>
-            <rect x="161" y="29" width="11.5" height="49" fill="#a5762f"/>
-            <path d="M15,69 H64 A11.5,11.5 0 0 0 64,46 H24 A10,10 0 0 1 24,26 H70 L93,50 Q99,56.5 105,50 L130,26 H203" fill="none" stroke="#2b201a" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <small>SUNYUL TAX FIRM</small>
-        </div>
+    <div class="member-card reveal">
+      <div class="prof-role">SUNYUL TAX FIRM</div>
+      <div class="prof-name serif">김희진 <span>세무사</span></div>
+      <div class="prof-line"></div>
+      <div class="prof-bio">
+        <p><strong>납세자와 과세관청, 양쪽을 모두 경험한 세무사입니다.</strong> 대형 증권사와 일선 세무서 실무를 두루 거친 19년 경력으로, 개인·법인의 세무 전반을 폭넓게 다룹니다.</p>
+        <p>과세관청이 어떤 지점을 들여다보는지 아는 것은 신고의 완성도를 좌우합니다. 신고 단계에서부터 쟁점이 될 수 있는 부분을 미리 점검해, 사후 소명과 가산세 리스크를 줄이는 꼼꼼한 세무를 지향합니다.</p>
       </div>
-      <div>
-        <div class="prof-role">SUNYUL TAX FIRM</div>
-        <div class="prof-name serif">김희진 <span>세무사</span></div>
-        <div class="prof-line"></div>
-        <div class="prof-bio">
-          <p><strong>납세자와 과세관청, 양쪽을 모두 경험한 세무사입니다.</strong> 대형 증권사와 일선 세무서 실무를 두루 거친 19년 경력으로, 개인·법인의 세무 전반을 폭넓게 다룹니다.</p>
-          <p>과세관청이 어떤 지점을 들여다보는지 아는 것은 신고의 완성도를 좌우합니다. 신고 단계에서부터 쟁점이 될 수 있는 부분을 미리 점검해, 사후 소명과 가산세 리스크를 줄이는 꼼꼼한 세무를 지향합니다.</p>
-        </div>
-        <div class="prof-tags">
-          <span class="chip">기장·세무 신고</span>
-          <span class="chip">종합소득세·부가가치세</span>
-          <span class="chip">과세관청 대응</span>
-        </div>
+      <div class="prof-tags">
+        <span class="chip">기장·세무 신고</span>
+        <span class="chip">종합소득세·부가가치세</span>
+        <span class="chip">과세관청 대응</span>
       </div>
     </div>
   </div>
